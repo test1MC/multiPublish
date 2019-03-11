@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="print" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>TEST Using Git with MadCap Flare</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/Git Presentation.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../dropDown.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <h1 class="Heading1">TEST Using Git with MadCap Flare</h1>
+                                <p>Presented by Matthew Tran</p>
+                                <h1 class="Heading1">Git</h1>
+                                <p>Source Control</p>
+                                <p>Version Control History</p>
+                                <p>Collaboration with multiple users</p>
+                                <h1 class="Heading1">General Workflow</h1>
+                                <p>Create a Flare project locally</p>
+                                <p>Create an empty remote repository through a provider (GitHub, BitBucket, GitLab, CloudForgeGit)</p>
+                                <p>Get the remote repository URL (should end in .git)</p>
+                                <p>Bind through Flare using Project Ribbon, Project Properties, and Source Control Tab</p>
+                                <p>*Demo in Flare and GitHub*</p>
+                                <h1 class="Heading1">Committing Changes/Pushing Changes</h1>
+                                <p>Make some edits and save files.&#160; You should see a red check mark.&#160; This means there are changes that are not committed</p>
+                                <p>Commit changes – commits it to local repository – check mark goes away – remote repository does not have it yet because it is not pushed</p>
+                                <p>Push to remote repository (or Synchronize if working with multiple users)</p>
+                                <h1 class="Heading1">Importing from Source Control</h1>
+                                <p>A project is already uploaded on a remote repository</p>
+                                <p>Browse to the remote repository (typically through the browser, through <a href="http://www.github.com"><span class="Hyperlink">www.github.com</span></a> or <a href="http://www.bitbucket.com"><span class="Hyperlink">www.bitbucket.com</span></a>)</p>
+                                <p>Get the URL (should end in .git)</p>
+                                <p>Start a New Project &gt; Import from Source Control &gt;&#160; Git &gt; Paste URL &gt; Select Project Files</p>
+                                <h1 class="Heading1">Binding a project to Git outside of Flare</h1>
+                                <p>Not recommended</p>
+                                <ol start="1" class="ol_1">
+                                    <li class="ListParagraph" value="1">Create Project / Open Project</li>
+                                    <li class="ListParagraph" value="2">Browse to the root folder if the project</li>
+                                    <li class="ListParagraph" value="3">Open git bash</li>
+                                    <li class="ListParagraph" value="4">`git init` to initialize git <span class="span_1">à</span>OK through the prompts</li>
+                                    <li class="ListParagraph" value="5">Create a .gitignore file</li>
+                                </ol>
+                                <ol start="1" class="ol_2">
+                                    <li class="ListParagraph" value="1">To create a .gitignore file, open git bash first, then type `touch .gitignore` and it should create a file for you.&#160; Then open it and paste the listed files above </li>
+                                    <li class="ListParagraph" value="2">Paste the following into the .gitignore file</li>
+                                </ol>
+                                <p class="ListParagraph">/Output </p>
+                                <p class="ListParagraph">/Analyzer</p>
+                                <p class="ListParagraph">/FileSync</p>
+                                <p class="ListParagraph">/Project/Users</p>
+                                <p class="ListParagraph">/.gitignore</p>
+                                <p class="ListParagraph">/.svn</p>
+                                <p class="ListParagraph">**/Thumbs.db</p>
+                                <ol start="6" class="ol_1">
+                                    <li class="ListParagraph" value="6">‘git status’ to check to see what files are about to be commit (should only see content, project, and flprj file</li>
+                                    <li class="ListParagraph" value="7">`git add .`</li>
+                                    <li class="ListParagraph" value="8">`git status` ( should see a lot of green files)</li>
+                                    <li class="ListParagraph" value="9">`git commit -m “initial commit”</li>
+                                    <li class="ListParagraph" value="10">`git status` should see nothing to commit, working tree clean</li>
+                                    <li class="ListParagraph_1" value="11"><span class="span_2">git remote add origin </span><span class="span_2">https://github.com/test1MC/matthewtestbindoutsideflare.git</span><span class="span_2"> [use your git url instead]</span>
+                                    </li>
+                                    <li class="ListParagraph" value="12">Login if necessary</li>
+                                    <li class="ListParagraph" value="13">`git push –u origin master`</li>
+                                    <li class="ListParagraph" value="14">Check remote repository</li>
+                                </ol>
+                                <h1 class="Heading1">Commiting/Pushing changes outside of Flare (when Flare isn’t working)</h1>
+                                <ol start="1" class="ol_1">
+                                    <li class="ListParagraph" value="1">Open Git Bash in the project root folder</li>
+                                    <li class="ListParagraph" value="2">`git status` to see what needs to be committed</li>
+                                    <li class="ListParagraph" value="3">`git add .` to add all pending changes to be commited</li>
+                                    <li class="ListParagraph" value="4">`git commit - m “more changes”`</li>
+                                    <li class="ListParagraph" value="5">`git status` to see no pending changes</li>
+                                    <li class="ListParagraph" value="6">`git push` to push to remote server (or `git push origin master`)</li>
+                                    <li class="ListParagraph" value="7">Should be able to pull latest repo from repository by hitting ‘pull’, closing the project and reopening and hitting ‘yes’, or reimport from source control</li>
+                                </ol>
+                                <h1 class="Heading1">Using Git with SSH Keys</h1>
+                                <ol start="1" class="ol_1">
+                                    <li class="ListParagraph" value="1">Open Git Bash</li>
+                                    <li class="ListParagraph" value="2">Type `ssh-keygen`</li>
+                                    <li class="ListParagraph" value="3">Follow prompts to store in default location; Should be Users/mtran/.ssh</li>
+                                    <li class="ListParagraph" value="4">Navigate to it in Windows (Users/mtran/.ssh)</li>
+                                    <li class="ListParagraph" value="5">Open id_rsa.pub in notepad and copy the entire content</li>
+                                    <li class="ListParagraph" value="6">In your Git provider, go to Settings and add SSH key</li>
+                                    <li class="ListParagraph" value="7">Pull git repo through import through source control, and choose SSH key files by browsing</li>
+                                </ol>
+                                <h1 class="Heading1">Publishing to Git</h1>
+                                <ol start="1" class="ol_1">
+                                    <li class="ListParagraph" value="1">Do not publish to the same repository that project is bound to</li>
+                                    <li class="ListParagraph" value="2">Set up a separate ‘Output/Publish’ Repository</li>
+                                    <li class="ListParagraph" value="3">Create New Destination</li>
+                                    <li class="ListParagraph" value="4">Choose Source Control from the dropdown</li>
+                                    <li class="ListParagraph" value="5">Create a temporary folder on machine outside of the Flare project (like desktop or documents)</li>
+                                </ol>
+                                <ol start="1" class="ol_2">
+                                    <li class="ListParagraph" value="1">This basically serves as a local publishing destination, where it will initialize git, then push to the new repository</li>
+                                </ol>
+                                <ol start="6" class="ol_1">
+                                    <li class="ListParagraph" value="6">Insert git url and credentials</li>
+                                    <li class="ListParagraph" value="7">Enable push to Remote</li>
+                                    <li class="ListParagraph" value="8">Choose Origin</li>
+                                    <li class="ListParagraph" value="9">Save</li>
+                                    <li class="ListParagraph" value="10">Publish from Target</li>
+                                    <li class="ListParagraph" value="11">Check publish destination / remote repository</li>
+                                </ol>
+                                <h1 class="Heading1">How to ‘Roll Back/Revert’ to a previous commit</h1>
+                                <ol start="1" class="ol_1">
+                                    <li class="ListParagraph" value="1">Browse commit history on remote repo and find the ‘commit number’</li>
+                                    <li class="ListParagraph" value="2">Close Flare</li>
+                                    <li class="ListParagraph" value="3">Open Git bash in root folder</li>
+                                    <li class="ListParagraph" value="4">`git reset –hard ########’</li>
+                                    <li class="ListParagraph" value="5">Open Flare and see that the project is at the correct state</li>
+                                    <li class="ListParagraph" value="6">`git push origin master --force'</li>
+                                </ol>
+                                <ol start="1" class="ol_2">
+                                    <li class="ListParagraph" value="1">This removed the commits after and pushed it over the remote repo, so the remote repo loses the same number of commits</li>
+                                </ol>
+                                <h1 class="Heading1">Other issues with Git</h1>
+                                <ol start="1" class="ol_1">
+                                    <li class="ListParagraph" value="1">Someone had a .git folder in a parent folder</li>
+                                </ol>
+                                <ol start="1" class="ol_2">
+                                    <li class="ListParagraph" value="1">So the entire folder (like My Projects) had a .git file and had git initialized</li>
+                                    <li class="ListParagraph" value="2">Possibly a `git init` run from that folder</li>
+                                    <li class="ListParagraph" value="3">Check to see if that parent folder was intended to be initialized in git</li>
+                                    <li class="ListParagraph" value="4">Easy to spot because when you do `git status` you see a lot of the other folders outside of the Flare project</li>
+                                </ol>
+                                <ol start="2" class="ol_1">
+                                    <li class="ListParagraph" value="2">Add collaborator</li>
+                                </ol>
+                                <ol start="1" class="ol_2">
+                                    <li class="ListParagraph" value="1">User can pull from the repo but is not added as a collaborator, so he/she cannot push</li>
+                                    <li class="ListParagraph" value="2">Add collaborator though settings/collaborators</li>
+                                </ol>
+                                <ol start="3" class="ol_1">
+                                    <li class="ListParagraph" value="3">Permissions</li>
+                                </ol>
+                                <ol start="1" class="ol_2">
+                                    <li class="ListParagraph" value="1">Remote repos have 3 levels of permissions</li>
+                                </ol>
+                                <ol start="1" class="ol_3">
+                                    <li class="ListParagraph" value="1">Administrator</li>
+                                    <li class="ListParagraph" value="2">Collaborator</li>
+                                    <li class="ListParagraph" value="3">Public</li>
+                                </ol>
+                                <ol start="2" class="ol_2">
+                                    <li class="ListParagraph" value="2">Administrator typically has read/write/execute permissions</li>
+                                    <li class="ListParagraph" value="3">Can also set permissions levels for collaborators and public</li>
+                                    <li class="ListParagraph" value="4">Have administrator ensure that they are added as a collaborator and have read and write permissions</li>
+                                </ol>
+                                <ol start="4" class="ol_1">
+                                    <li class="ListParagraph" value="4">Too many changed files/commits pending</li>
+                                </ol>
+                                <ol start="1" class="ol_2">
+                                    <li class="ListParagraph" value="1">Push outside of Flare</li>
+                                    <li class="ListParagraph" value="2">Avoid infrequent commit habits</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+/*<meta sourceDocument="C:\Users\lbalababa\Desktop\Git Presentation.docx" />*/
+
+p
+{
+	margin-bottom: 10pt;
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+}
+
+ol
+{
+	margin-bottom: 10pt;
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+}
+
+ul
+{
+	margin-bottom: 10pt;
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+}
+
+li
+{
+	margin-bottom: 10pt;
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+}
+
+td
+{
+	margin-bottom: 10pt;
+	font-family: Calibri;
+	font-size: 11pt;
+	vertical-align: top;
+}
+
+h1.Heading1
+{
+	page-break-after: avoid;
+	page-break-inside: avoid;
+	margin-top: 24pt;
+	margin-bottom: 0pt;
+	mc-heading-level: 1;
+	font-family: Cambria;
+	font-weight: bold;
+	color: #365F91;
+	font-size: 14pt;
+}
+
+span.Hyperlink
+{
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+li.ListParagraph
+{
+	margin-bottom: 10pt;
+	font-size: 11pt;
+	margin-left: 36pt;
+	font-family: Calibri;
+}
+
+p.ListParagraph
+{
+	margin-bottom: 10pt;
+	font-size: 11pt;
+	margin-left: 36pt;
+	font-family: Calibri;
+}
+
+span.span_1
+{
+	font-family: Wingdings;
+}
+
+ol.ol_1
+{
+	list-style-type: decimal;
+	margin-left: 36pt;
+}
+
+ol.ol_2
+{
+	list-style-type: lower-alpha;
+	margin-left: 72pt;
+}
+
+span.span_2
+{
+	font-family: Consolas;
+	color: #24292E;
+}
+
+li.ListParagraph_1
+{
+	font-size: 11pt;
+	margin-left: 36pt;
+	font-family: Calibri;
+	margin-bottom: 0pt;
+}
+
+ol.ol_3
+{
+	list-style-type: lower-roman;
+	margin-left: 108pt;
+}
+
